@@ -22,18 +22,18 @@ Partial Class HighScores
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.lblHighScores = New System.Windows.Forms.Label()
+        Me.lblHighScore = New System.Windows.Forms.Label()
         Me.lblScore = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'lblHighScores
+        'lblHighScore
         '
-        Me.lblHighScores.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblHighScores.Location = New System.Drawing.Point(12, 9)
-        Me.lblHighScores.Name = "lblHighScores"
-        Me.lblHighScores.Size = New System.Drawing.Size(260, 26)
-        Me.lblHighScores.TabIndex = 1
-        Me.lblHighScores.Text = "High Scores"
+        Me.lblHighScore.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHighScore.Location = New System.Drawing.Point(12, 9)
+        Me.lblHighScore.Name = "lblHighScore"
+        Me.lblHighScore.Size = New System.Drawing.Size(260, 26)
+        Me.lblHighScore.TabIndex = 1
+        Me.lblHighScore.Text = "High Scores"
         '
         'lblScore
         '
@@ -42,7 +42,7 @@ Partial Class HighScores
         Me.lblScore.Name = "lblScore"
         Me.lblScore.Size = New System.Drawing.Size(260, 217)
         Me.lblScore.TabIndex = 2
-        Me.lblScore.Text = "test"
+        Me.lblScore.Text = "homosexual, gay"
         '
         'HighScores
         '
@@ -50,12 +50,12 @@ Partial Class HighScores
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(284, 261)
         Me.Controls.Add(Me.lblScore)
-        Me.Controls.Add(Me.lblHighScores)
+        Me.Controls.Add(Me.lblHighScore)
         Me.Name = "HighScores"
         Me.Text = "HighScores"
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents lblHighScores As System.Windows.Forms.Label
+    Friend WithEvents lblHighScore As System.Windows.Forms.Label
     Friend WithEvents lblScore As Label
 End Class

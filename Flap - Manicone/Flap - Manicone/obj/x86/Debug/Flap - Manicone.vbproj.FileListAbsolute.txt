@@ -59,3 +59,17 @@ C:\Users\libra\Documents\GitHub\prog\Flap - Manicone\Flap - Manicone\obj\x86\Deb
 C:\Users\libra\Documents\GitHub\prog\Flap - Manicone\Flap - Manicone\obj\x86\Debug\Flap - Manicone.exe
 C:\Users\libra\Documents\GitHub\prog\Flap - Manicone\Flap - Manicone\obj\x86\Debug\Flap - Manicone.xml
 C:\Users\libra\Documents\GitHub\prog\Flap - Manicone\Flap - Manicone\obj\x86\Debug\Flap - Manicone.pdb
+C:\Users\Dominick\Documents\GameMakerStudio2\prog\Flap - Manicone\Flap - Manicone\bin\Debug\Flap - Manicone.exe
+C:\Users\Dominick\Documents\GameMakerStudio2\prog\Flap - Manicone\Flap - Manicone\bin\Debug\Flap - Manicone.pdb
+C:\Users\Dominick\Documents\GameMakerStudio2\prog\Flap - Manicone\Flap - Manicone\bin\Debug\Flap - Manicone.xml
+C:\Users\Dominick\Documents\GameMakerStudio2\prog\Flap - Manicone\Flap - Manicone\obj\x86\Debug\Flap - Manicone.vbprojResolveAssemblyReference.cache
+C:\Users\Dominick\Documents\GameMakerStudio2\prog\Flap - Manicone\Flap - Manicone\obj\x86\Debug\FlappyBird.Debugger.resources
+C:\Users\Dominick\Documents\GameMakerStudio2\prog\Flap - Manicone\Flap - Manicone\obj\x86\Debug\FlappyBird.frmGame.resources
+C:\Users\Dominick\Documents\GameMakerStudio2\prog\Flap - Manicone\Flap - Manicone\obj\x86\Debug\FlappyBird.frmStart.resources
+C:\Users\Dominick\Documents\GameMakerStudio2\prog\Flap - Manicone\Flap - Manicone\obj\x86\Debug\FlappyBird.HighScores.resources
+C:\Users\Dominick\Documents\GameMakerStudio2\prog\Flap - Manicone\Flap - Manicone\obj\x86\Debug\FlappyBird.Resources.resources
+C:\Users\Dominick\Documents\GameMakerStudio2\prog\Flap - Manicone\Flap - Manicone\obj\x86\Debug\Flap - Manicone.vbproj.GenerateResource.Cache
+C:\Users\Dominick\Documents\GameMakerStudio2\prog\Flap - Manicone\Flap - Manicone\obj\x86\Debug\Flap - Manicone.vbproj.CoreCompileInputs.cache
+C:\Users\Dominick\Documents\GameMakerStudio2\prog\Flap - Manicone\Flap - Manicone\obj\x86\Debug\Flap - Manicone.exe
+C:\Users\Dominick\Documents\GameMakerStudio2\prog\Flap - Manicone\Flap - Manicone\obj\x86\Debug\Flap - Manicone.xml
+C:\Users\Dominick\Documents\GameMakerStudio2\prog\Flap - Manicone\Flap - Manicone\obj\x86\Debug\Flap - Manicone.pdb
