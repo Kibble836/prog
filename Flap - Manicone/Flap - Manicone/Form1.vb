@@ -6,17 +6,19 @@
     Private intCanJump As Integer = 2                                       'jump delays
     Public intScore As Integer = 0                                          'the player's score
     Public strPlayer As String                                              'player's name for scores
+    Private blnPillarCounted As Boolean                                     'flag to count score of pillar if true
 
     Public Structure Attributes
         Public Const intYGap As Integer = 150                               'vertical gap between pillars
         Public Const intXGap As Integer = 287                               'horizontal gap between pillars
         Public Const intOffset As Integer = 75                              'vertical offset between the form and pillar generation
-        Public Const intSpeed As Integer = 1                                'speed at which the pillars move each tick
+        Public Const intSpeed As Integer = 2                                'speed at which the pillars move each tick
         Public Const intTermVel As Integer = 7                              'clamping velocity for fallspeed of bird
         Public Const dblGravFactor As Double = 0.5                              'magnitude to add to gravity
         Public Const intJumpStrength As Integer = -15                           'force to add to a jump
         Public Const intJumpDelay As Integer = 10                               'delay between jumps
         Public Const intBirdX As Integer = 100                                  'X position to place the bird
+        Public Const intDetectionRadius As Integer = 2                          'radius to detect pillars
 
         Public Const intFrmWidth As Integer = 500                               'width of the form
         Public Const intFrmHeight As Integer = 500                              'height of the form
@@ -37,7 +39,7 @@
     End Sub
 
     Private Sub frmGame_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Debugger.Show()        
+        Debugger.Show()
         'Initialization
         Debugger.lblJumps.Text = 0
         tmrPillar.Enabled = True
@@ -66,20 +68,29 @@
         End With
     End Sub
 
-    'Function which returns a random value between intLow and intHigh
-    Public Function Rand(ByVal intLow As Integer, ByVal intHigh As Integer) As Integer
-        Return Rnd() * (intHigh - intLow + 1) + intLow
-    End Function
-
     Private Sub SetPillar(ByVal intPillar As Integer)
         Dim intRand As Integer = Rand(Attributes.intMinH, Attributes.intMaxH)       'dimming the random number
         With pillar(intPillar, 1)                                                   'sets the location to be a random height and to appear off the form
             .Left = Me.ClientRectangle.Right
             .Top = intRand
         End With
+        blnPillarCounted = True
         With pillar(intPillar, 0)                                                   'sets the location to be a random height minus the gap and to appear off the form
             .Left = Me.ClientRectangle.Right
             .Top = intRand - Attributes.intYGap - .Size.Height
+        End With
+    End Sub
+
+    'Function which returns a random value between intLow and intHigh
+    Public Function Rand(ByVal intLow As Integer, ByVal intHigh As Integer) As Integer
+        Return Rnd() * (intHigh - intLow + 1) + intLow
+    End Function
+
+    Public Sub Tween(ByRef obj As Object, ByVal xdest As Integer, ByVal ydest As Integer)
+        With obj
+            Dim newX = (.Location.X + xdest) / 2
+            Dim newY = (.Location.Y + ydest) / 2
+            .Location = New Point(newX, newY)
         End With
     End Sub
 
@@ -93,12 +104,17 @@
     End Function
 
     Private Sub tmrPillar_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tmrPillar.Tick
+        Static intBirdMid As Integer
+        Static intPillarMid As Integer
+        intBirdMid = picBird.Left - picBird.Size.Width / 2
         'Update the pillars
         For x = 0 To 1
             For y = 0 To 1
-                pillar(x, y).Left -= Attributes.intSpeed                
+                pillar(x, y).Left -= Attributes.intSpeed
             Next
-            If pillar(x, 0).Location.X = Attributes.intBirdX Then
+            intPillarMid = pillar(x, 0).Left - pillar(x, 0).Size.Width / 2
+            If Math.Abs(intPillarMid - intBirdMid) <= Attributes.intDetectionRadius And blnPillarCounted = True Then
+                blnPillarCounted = False
                 intScore += 1
                 lblScore.Text = intScore
             End If
