@@ -126,6 +126,7 @@
         Call Collision(picBird, pillar(0, 1))
         Call Collision(picBird, pillar(1, 0))
         Call Collision(picBird, pillar(1, 1))
+        Call SkyBox(picBird)
     End Sub
 
     Sub EndGame()
@@ -140,6 +141,10 @@
             PrintLine(intFile, intScore)
             FileClose()
         End If
+    End Sub
+
+    Sub SkyBox(ByRef picBird As PictureBox)
+        '/////SETUP CLIENT RECTANGLE FOR SKYBOX
     End Sub
 
     Sub Collision(ByRef picBird As PictureBox, ByRef picPillar As PictureBox)
