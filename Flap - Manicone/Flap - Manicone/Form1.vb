@@ -180,9 +180,7 @@
     End Sub
 
     Private Sub StartToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles StartToolStripMenuItem.Click
-        frmStart.Show()
-        Me.Hide()
-        Call frmGame_Load(sender, e)
+        Application.Restart()
     End Sub
 
     Private Sub tmrFlapDelay_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tmrFlapDelay.Tick

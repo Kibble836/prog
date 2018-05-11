@@ -42,7 +42,6 @@ Partial Class HighScores
         Me.lblScore.Name = "lblScore"
         Me.lblScore.Size = New System.Drawing.Size(260, 217)
         Me.lblScore.TabIndex = 2
-        Me.lblScore.Text = "homosexual, gay"
         '
         'HighScores
         '
